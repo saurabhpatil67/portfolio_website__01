@@ -36,9 +36,9 @@ const Links = () => {
           href={`#${item}`}
           key={index}
           variants={itemVariants}
-          whileHover={{scale: 1.2}}
-          whileTap={{scale: 0.9}}
-          
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+
         >
           {item}
         </motion.a>
