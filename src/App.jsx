@@ -2,6 +2,7 @@ import React from 'react'
 import "./app.scss"
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
+import Parallax from './components/parallax/Parallax'
 
 const App = () => {
   return (
@@ -10,8 +11,14 @@ const App = () => {
         <Navbar/>
         <Hero/>
       </section>
-      <section>Parallax</section>
-      <section>Services</section>
+
+      <section>
+        <Parallax type="services"/>
+      </section>
+      <section>services</section>
+      <section>
+        <Parallax type="portfolio"/>
+      </section>
       <section>Parallax</section>
       <section>Portfolio1</section>
       <section>Portfolio2</section>
