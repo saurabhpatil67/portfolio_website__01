@@ -1,19 +1,19 @@
 import { useRef } from "react";
 import "./services.scss"
-import {motion, useInView} from "motion/react";
+import { motion, useInView } from "motion/react";
 
 const variants = {
-  initial:{
-    x:-500,
+  initial: {
+    x: -500,
     opacity: 0,
     // y:100
   },
-  animate:{
+  animate: {
     x: 0,
     opacity: 1,
     // y: 0,
-    transition:{
-      duration:1,
+    transition: {
+      duration: 1,
       staggerChildren: 0.4,
     }
   }
@@ -23,21 +23,21 @@ const Services = () => {
 
   const ref = useRef()
 
-  const isInView = useInView(ref, {margin:"-100px"})
+  const isInView = useInView(ref, { margin: "-100px" })
   return (
-    <motion.div 
-    className="services"
-    ref={ref} 
-    variants={variants} 
-    initial="initial" 
-    // animate="animate"
-    // whileInView="animate"
-    animate={isInView && "animate"}
+    <motion.div
+      className="services"
+      ref={ref}
+      variants={variants}
+      initial="initial"
+      // animate="animate"
+      // whileInView="animate"
+      animate={isInView && "animate"}
 
     >
       <motion.div className="textContainer" variants={variants}>
-        <p>I focus on helping your brand grow 
-           <br/>and move forward</p>
+        <p>I focus on helping your brand grow
+          <br />and move forward</p>
 
         <hr />
 
@@ -47,17 +47,17 @@ const Services = () => {
         <div className="title">
           <img src="/public/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color: "orange"}}>
+            <motion.b whileHover={{ color: "orange" }}>
               Unique
-            </motion.b> 
+            </motion.b>
             <span> &nbsp;Ideas</span>
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color: "orange"}}>
+            <motion.b whileHover={{ color: "orange" }}>
               For Your
-            </motion.b> 
+            </motion.b>
             <span> &nbsp;Business.</span>
           </h1>
           <button>WHAT WE DO?</button>
@@ -65,22 +65,22 @@ const Services = () => {
       </motion.div>
 
       <motion.div className="listContainer" variants={variants}>
-        <motion.div className="box" whileHover={{background: "lightgray", color:"black"}}>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
           <h2>Branding</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium suscipit molestias tempore officiis nostrum.</p>
           <button>Go</button>
         </motion.div>
-        <motion.div className="box" whileHover={{background: "lightgray", color:"black"}}>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
           <h2>Branding</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium suscipit molestias tempore officiis nostrum.</p>
           <button>Go</button>
         </motion.div>
-        <motion.div className="box" whileHover={{background: "lightgray", color:"black"}}>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
           <h2>Branding</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium suscipit molestias tempore officiis nostrum.</p>
           <button>Go</button>
         </motion.div>
-        <motion.div className="box" whileHover={{background: "lightgray", color:"black"}}>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
           <h2>Branding</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium suscipit molestias tempore officiis nostrum.</p>
           <button>Go</button>
