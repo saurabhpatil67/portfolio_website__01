@@ -23,6 +23,7 @@ const App = () => {
       <section>
         <Parallax type="portfolio"/>
       </section>
+      
       <Portfolio/>
       
       <section>Contact</section>
