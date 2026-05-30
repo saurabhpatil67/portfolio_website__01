@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion } from "motion/react";
 import emailjs from '@emailjs/browser';
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 
 const variants = {
@@ -30,8 +33,8 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_3lqs80s', 'template_s6pmc7i', formRef.current, {
-                publicKey: 'ObZ6NXCOUfuM3Yckn',
+            .sendForm(serviceId, templateId, formRef.current, {
+                publicKey: publicKey,
             })
             .then(
                 () => {
